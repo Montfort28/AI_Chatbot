@@ -356,58 +356,44 @@ footer {
     font-size: 0.85rem;
 }
 
-/* Responsive Design for Phones (max-width: 600px) */
-@media (max-width: 600px) {
-    body {
-        font-size: 14px; /* Smaller font size for phones */
+   /* Responsive Design */
+   @media (max-width: 768px) {
+    .chat-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 
+    .progress-container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .message {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
     .container {
-        padding: 0.5rem; /* Smaller padding for phones */
+        padding: 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
     }
 
     .chat-container {
-        max-height: 80vh; /* Adjust chat container height for smaller screens */
+        height: 80vh;
     }
 
-    .chat-input input {
-        padding: 0.5rem 0.8rem; /* Smaller padding for phones */
-        font-size: 0.9rem; /* Smaller font size for phones */
+    .message {
+        max-width: 95%;
+        padding: 0.5rem 0.75rem;
     }
 
-    .chat-input button {
-        padding: 0.4rem 1rem; /* Smaller padding for phones */
-        font-size: 0.9rem; /* Smaller font size for phones */
-    }
-
-    .quick-suggestions {
-        flex-direction: column; /* Stack suggestion chips vertically on phones */
-    }
-
-    .suggestion-chip {
-        width: 100%; /* Full width for suggestion chips on phones */
-        margin-bottom: 5px; /* Add spacing between stacked chips */
-    }
-}
-
-/* Responsive Design for Tablets (601px - 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-    body {
-        font-size: 15px; /* Slightly larger font size for tablets */
-    }
-
-    .container {
-        max-width: 90%; /* Slightly wider container for tablets */
-    }
-}
-
-/* Responsive Design for Desktops (min-width: 901px) */
-@media (min-width: 901px) {
-    body {
-        font-size: 16px; /* Default font size for desktops */
-    }
-
-    .container {
-        max-width: 800px; /* Fixed width for desktops */
+    .quick-reply-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
     }
 }
