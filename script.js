@@ -121,13 +121,6 @@ const greetings = [
     "Welcome to Health Companion! I'm here to provide information about your health concerns. Remember, I'm not a replacement for professional medical advice. How can I assist you today?"
 ];
 
-// Welcome suggestions - REMOVED the welcome suggestions and just using symptom suggestions
-// const welcomeSuggestions = [
-//     "What can you help with?",
-//     "How does this work?",
-//     "Tell me about yourself"
-// ];
-
 // Add initial suggestions
 function addSuggestions(suggestions) {
     quickSuggestions.innerHTML = '';
@@ -465,29 +458,13 @@ window.addEventListener('load', () => {
 const speechButton = document.createElement('button');
 speechButton.innerHTML = '<i class="fas fa-volume-up"></i>';
 speechButton.className = 'speech-button';
-speechButton.style.position = 'absolute';
-speechButton.style.right = '70px';
-speechButton.style.top = '20px';
-speechButton.style.background = 'none';
-speechButton.style.border = 'none';
-speechButton.style.color = 'white';
-speechButton.style.cursor = 'pointer';
-speechButton.style.fontSize = '1.5rem';
-document.querySelector('header').appendChild(speechButton);
+document.querySelector('.header-buttons').appendChild(speechButton);
 
 // Add reset button to header
 const resetButton = document.createElement('button');
 resetButton.innerHTML = '<i class="fas fa-redo-alt"></i>';
 resetButton.className = 'reset-button';
-resetButton.style.position = 'absolute';
-resetButton.style.right = '120px';
-resetButton.style.top = '20px';
-resetButton.style.background = 'none';
-resetButton.style.border = 'none';
-resetButton.style.color = 'white';
-resetButton.style.cursor = 'pointer';
-resetButton.style.fontSize = '1.5rem';
-document.querySelector('header').appendChild(resetButton);
+document.querySelector('.header-buttons').appendChild(resetButton);
 
 // Reset chat function
 function resetChat() {
