@@ -218,9 +218,10 @@ function processUserInput(text) {
     // Check for greeting or help request
     if (firstMessage) {
         firstMessage = false;
-        // Immediately jump to the symptom suggestions instead of welcome buttons
+        // Add suggestions but CONTINUE processing the message
         addSuggestions(initialSuggestions);
-        return;
+        // Remove the return statement so it continues processing!
+        // return;  <- This is causing the issue
     }
     
     // Convert to lowercase for case-insensitive matching
